@@ -34,5 +34,12 @@ final class RomanToDecimalTest extends TestCase
         $romanToDecimal = new RomanToDecimal();
         $this->assertSame(1983, $romanToDecimal->calculate('MCMLXXXIII'));
     }
+
+    public function testFOOisInvalid()
+    {
+        $romanToDecimal = new RomanToDecimal();
+        $this->expectException(\Exception::class);
+        $romanToDecimal->calculate('FOO');
+    }
 }
 
