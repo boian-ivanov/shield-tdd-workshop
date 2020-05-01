@@ -16,5 +16,12 @@ final class RomanToDecimalTest extends TestCase
         $romanToDecimal = new RomanToDecimal();
         $this->assertSame(1, $romanToDecimal->calculate('I'));
     }
+
+    public function testVIisFor6()
+    {
+
+        $romanToDecimal = new RomanToDecimal();
+        $this->assertSame(6, $romanToDecimal->calculate('VI'));
+    }
 }
 
