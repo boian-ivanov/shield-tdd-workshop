@@ -10,5 +10,11 @@ final class RomanToDecimalTest extends TestCase
         $romanToDecimal = new RomanToDecimal();
         $this->assertSame(5, $romanToDecimal->calculate('V'));
     }
+
+    public function testIisFor1()
+    {
+        $romanToDecimal = new RomanToDecimal();
+        $this->assertSame(1, $romanToDecimal->calculate('I'));
+    }
 }
 
